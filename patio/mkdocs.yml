@@ -1,0 +1,22 @@
+site_name: "PATIO"
+theme:
+  name: "material"
+  logo: "images/logo.svg" 
+  font:
+    text: Figtree
+    code: Nunito
+  features:
+    - navigation.top
+    - navigation.tabs
+  toc:
+    enable: false
+
+nav:
+  - Home: index.md
+  - About: about.md
+  - Knowledge Base: knowledge-base.md
+  - Partners: partners.md
+  - Contact: contact.md
+
+extra_css:
+  - 'css/extra.css'

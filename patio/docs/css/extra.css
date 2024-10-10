@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,700&display=swap');
+
+html {
+    font-size: 22px;
+}
+
+.md-content__title {
+    display: none;
+}
+
+.md-footer {
+    display: none !important;
+}
+
+.md-header__title {
+    font-family: "IBM Plex Mono", monospace !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.1rem;
+    font-style: normal;
+    margin-left: 0 !important;
+}
+
+.partner-logos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    /* Adjust spacing between images */
+    /* padding: 1rem 0; */
+}
+
+.partner-logos img {
+    width: 150px;
+    /* Makes images responsive */
+    height: 200px;
+    flex: 1 1 200px;
+    /* Flex-grow and min-width of images */
+    object-fit: contain;
+}
+
+/* Container holding the text and image */
+.content-row {
+    display: flex;
+    justify-content: space-between;
+    /* Even spacing between items */
+    align-items: center;
+    /* Vertically align the items */
+    flex-wrap: wrap;
+    /* Allows the elements to wrap on smaller screens */
+    gap: 1rem;
+    /* Adds space between text and image */
+    margin-bottom: 1rem;
+    /* Adds margin below the section */
+}
+
+/* Text column */
+.text-column {
+    margin-top: 0;
+    flex: 1;
+    /* Flex-grow with a base of 60% width */
+}
+
+/* Image column */
+.image-column {
+    flex: 1;
+    /* Flex-grow with a base of 30% width */
+}
+
+/* Ensure images are responsive */
+.image-column img {
+    width: 300px;
+    /* Makes images responsive */
+    height: 300px;
+    /* Maintain the image aspect ratio */
+}
+
+/* Stack columns vertically on smaller screens */
+@media (max-width: 768px) {
+    .content-row {
+        flex-direction: column;
+        /* Stack the text and image in a column */
+        align-items: flex-start;
+        /* Align items to the left */
+    }
+
+    .text-column,
+    .image-column {
+        flex: 1 1 100%;
+        /* Full width for both text and image */
+    }
+}
+
+/* Make images stack vertically on smaller screens */
+@media (max-width: 768px) {
+    .partner-logos {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+@media (min-width: 768px) {
+    .md-sidebar {
+        display: none !important;
+    }
+}
